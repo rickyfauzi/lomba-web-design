@@ -584,13 +584,6 @@ section.setup .text-header p {
     color: #1DA1F2;
 }
 
-.ig {
-    color: transparent;
-    background: linear-gradient(45deg, #fd5d94, #ec4eaa, #d03df5, #6b63ff, #51a1ff);
-    -webkit-background-clip: text;
-    background-clip: text;
-}
-
 .gh {
     color: #ffffff;
 }
@@ -607,6 +600,13 @@ section.setup .text-header p {
 
 .tentang p {
     color: black;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .sec-img {
+        margin-right: 80px;
+    }
+    /* Gaya untuk tablet atau iPad */
 }
 
 
@@ -641,6 +641,15 @@ section.setup .text-header p {
     margin-bottom: 20px;
     line-height: 1.6;
     color: black;
+}
+
+@media (max-width: 767px) {
+    .sec-text .xxl-title {
+        text-align: center;
+    }
+    .sec-text p {
+        text-align: justify;
+    }
 }
 
 .ud-contact {
