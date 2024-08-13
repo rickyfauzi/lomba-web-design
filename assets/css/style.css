@@ -1,11 +1,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
-:root {}
+:root {
+    --dark:#0F051D;
+    --white: #fff;
+    --black:#000;
+    --pink : ##e009e4;
+}
 
 body {
     font-family: 'Plus Jakarta Sans', sans-serif;
-    background-color: white;
+    background-color: #0F051D;
     color: white;
 }
+
+
+@media (min-width: 1200px) {
+    .container {
+        padding: 0 70px;
+    }
+}
+
+@media (max-width: 758px){
+     .content {
+        padding: 0 40px;
+    }
+}
+
 
 .btn {
     border-radius: 8px;
@@ -20,23 +39,27 @@ body {
     text-align: center;
     font-size: 25px;
     margin: 20px 0;
-    padding: 20px 0;
+    padding: 50px 0;
 }
 
 .title h3 {
-    display: inline-block;
-    padding: 8px 15px;
-    font-size: 18px;
-    background-color: #EFEEFE;
-    color: #5751E1;
+    font-size: 35px;
+    font-weight: 900;
+    color: white;
+    text-transform: uppercase;
     border-radius: 5px;
 }
 
 .title span {
-    display: block;
-    font-size: 15px;
-    font-weight: 800;
-    color: black;
+    font-size: 35px;
+    font-weight: 900;
+    background: linear-gradient(90deg, #1c3cf3 0%, #e009e4 100%);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.container {
+   
 }
 
 .navbar {
@@ -59,18 +82,18 @@ body {
 .navbar-brand {
     color: white;
     text-transform: uppercase;
-    font-size: 32px;
+    font-size: 25px;
     font-weight: 800;
     z-index: 99;
 }
 
 .navbar {
-    padding: 20px 30px;
+    padding: 20px 40px;
 }
 
 .navbar-nav .nav-link {
     margin-left: 40px;
-    font-size: 16px;
+    font-size: 15px;
     color: white;
 }
 
@@ -78,12 +101,21 @@ body {
     color: black;
 }
 
-.navbar-nav .nav-link.active {
-    color: #4267B2;
-    border-radius: 50px;
-    font-weight: bold;
-    text-decoration: underline;
+.navbar-nav .sosmed {
+    margin-left: 20px;
+    font-size: 25px;
+    background: linear-gradient(90deg, #1c3cf3 0%, #e009e4 100%);
+    -webkit-background-clip: text;
+    color: transparent;
 }
+
+
+
+.navbar-nav .nav-link.active {
+    color: white;
+    font-weight: bold;
+}
+
 
 .navbar-toggler {
     background-color: white;
@@ -134,6 +166,8 @@ body {
     color: red;
 }
 
+
+
 .scrolled .navbar-brand {
     color: black;
 }
@@ -150,7 +184,6 @@ body {
     width: 100%;
     top: 0;
     left: 0;
-    backdrop-filter: blur(23px);
     z-index: -1;
 }
 
@@ -191,7 +224,6 @@ section {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(rgba(17, 7, 254, 0.7), rgba(0, 224, 254, 0.7));
     z-index: -1;
 }
 
@@ -209,10 +241,16 @@ section {
     align-items: center;
 }
 
-.home .display-4 {
-    font-size: 54px;
-    color: #161439;
+.hero-section .display-4 {
+    font-size: 44px;
+    color: var(--white);
     font-weight: 800;
+    text-transform: uppercase;
+}
+
+.hero-section img {
+    width: 450px;
+    height: auto;
 }
 
 .display-4 span {}
@@ -223,7 +261,6 @@ section {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(rgb(0, 0, 0), rgba(0, 0, 0, 0.603));
     z-index: -1;
 }
 
@@ -243,10 +280,10 @@ section {
 }
 
 .btn-main {
-    background-color: #5751E1;
+    background: linear-gradient(90deg, #1c3cf3 0%, #e009e4 100%);
     position: relative;
-    padding: 10px 20px;
-    border: 1px solid;
+    border: 1px solid #000;
+    padding: 15px 20px;
     border-radius: 50px;
     color: white;
     box-shadow: 4px 6px black;
@@ -260,93 +297,7 @@ section {
     transition: all .3s ease-in-out;
 }
 
-section.setup {
-    padding: 80px 0;
-    background-position: center;
-    background-size: cover;
-}
 
-.setup .icons {
-    padding: 10px;
-    font-size: 23px;
-    color: black;
-    border-radius: 8px;
-}
-
-section.setup .text-header p {
-    font-size: 18px;
-    font-weight: 500;
-    color: black;
-    line-height: 20px;
-}
-
-.card-bayar i {
-    background-color: #1BCBE3;
-    /* Warna background untuk card pembayaran */
-}
-
-.pesan-1 i {
-    background-color: #5751E1;
-    /* Warna background untuk card pesanan */
-}
-
-.nikmati-1 i {
-    background-color: #FFC224;
-    /* Warna background untuk card nikmati makanan */
-}
-
-.card-bayar {
-    background-color: #F1FDFF;
-    box-shadow: 4px 6px #C9E4E9;
-    /* Warna background untuk card pembayaran */
-}
-
-.pesan-1 {
-    background-color: #EDEAFF;
-    box-shadow: 4px 6px #C8C1ED;
-    /* Warna background untuk card pesanan */
-}
-
-.nikmati-1 {
-    background-color: #FFF7E2;
-    box-shadow: 4px 6px #EBE0C4;
-    /* Warna background untuk card nikmati makanan */
-}
-
-.setup .card {
-    padding: 20px 20px;
-    color: black;
-    overflow: hidden;
-}
-
-.card .card-bayar-1 {
-    background-color: #97F700;
-    box-shadow: 4px 6px #000000;
-}
-
-.card .card-title h5 {
-    margin: 0 20px;
-}
-
-.card-title i {
-    font-size: 30px;
-    color: white;
-    position: relative;
-    display: inline;
-}
-
-.card-title {
-    display: flex;
-    align-items: center;
-    /* Menyamakan tinggi judul dan ikon */
-}
-
-.card-title i {
-    margin-right: 10px;
-    font-size: 30px;
-    padding: 10px;
-    border-radius: 50px;
-}
 
 .informasi {
     display: flex;
@@ -468,7 +419,7 @@ section.setup .text-header p {
     bottom: -180px;
     width: 100%;
     height: 100%;
-    background: linear-gradient(0deg, #ffffff 35%, transparent);
+    background: linear-gradient(0deg, #ffffff 45%, transparent);
     transition: 0.5s;
     z-index: 1;
 }
@@ -592,15 +543,50 @@ section.setup .text-header p {
     color: #4267B2;
 }
 
-.tentang {
-    padding: 80px 0;
+
+.hero-section .container {
     position: relative;
-    color: black;
+    z-index: 2;
 }
 
-.tentang p {
-    color: black;
+.hero-section h1 {
+    font-size: 48px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 20px;
 }
+
+.hero-section p {
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+.btn-main {
+    background-color: #feb47b;
+    color: #fff;
+    padding: 10px 30px;
+    border-radius: 50px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.btn-main:hover {
+    background-color: #ff7e5f;
+    color: #fff;
+}
+
+.btn-primary {
+    padding: 10px 20px;
+    border-radius: 50px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.btn-primary:hover {
+    background-color: #ff7e5f;
+    border-color: #ff7e5f;
+}
+
 
 @media (min-width: 768px) and (max-width: 991px) {
     .sec-img {
@@ -861,4 +847,294 @@ only screen and (min-width: 576px) and (max-width: 767px) {
 
 .review .stars {
     color: orange;
+}
+
+.top-text {
+    color: #6440FB;
+    font-size: 14px;
+}
+.nav-pills .nav-link {
+    color: #6C6C6C;
+    background-color: transparent;
+    border: none;
+}
+.nav-pills .nav-link.active {
+    color: #6440FB;
+    background-color: transparent;
+    border-bottom: 2px solid #6440FB;
+    border-radius: 0;
+}
+.course-card {
+    border-radius: 10px;
+    margin:  15px;
+    overflow: hidden;
+    border: 1px solid;
+    box-shadow: 0 0 10px rgba(0,0,0,0.4);
+}
+.course-image {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+.course-tags {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: #000000;
+}
+.course-tag {
+    background-color: white;
+    border-radius: 20px;
+    padding: 5px 10px;
+    margin-right: 5px;
+    font-size: 12px;
+}
+.course-info {
+    padding: 20px;
+}
+
+.course-info h5 {
+    color: black;
+}
+.course-rating {
+    color: #FFC107;
+}
+.enroll-btn {
+    background-color: #FFC107;
+    border: none;
+    border-radius: 20px;
+    padding: 5px 15px;
+}
+.course-price {
+    color: #6440FB;
+    font-weight: bold;
+}
+.slick-prev, .slick-next {
+    width: 40px;
+    height: 40px;
+    background-color: #6440fb;
+    border-radius: 50%;
+    z-index: 10;
+}
+.slick-prev:before, .slick-next:before {
+    font-size: 20px;
+}
+.slick-prev {
+    left: -40px;
+}
+.slick-next {
+    right: -40px;
+}
+
+.course-slider {
+    height: 100%;
+    padding: 40px 0;
+    height: 400px;
+    margin-bottom: 40px;
+}
+
+
+.slide h1 {
+    color: #161439;
+}
+
+.page-item {
+    margin: 0 5px;
+}
+
+.page-link {
+    color: #007bff;
+    text-decoration: none;
+}
+.about-section {
+    padding: 50px 0; /* Mengurangi padding untuk membuat section lebih kecil */
+}
+
+.about .content {
+}
+
+.about-text h2 {
+    font-size: 28px; /* Mengurangi ukuran font untuk heading */
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1.5px; /* Mengurangi letter spacing */
+    margin-bottom: 15px; /* Mengurangi margin bawah heading */
+}
+
+.about-text p {
+    font-size: 16px; 
+    color: #fff;
+    text-align:justify;
+    line-height: 1.6; /* Mengurangi jarak antar baris */
+    margin-bottom: 15px; /* Mengurangi margin bawah paragraf */
+}
+
+.about-image img {
+    border-radius: 8px; /* Sedikit mengurangi border-radius */
+    box-shadow: 0 3px 15px rgba(19, 8, 8, 0.6); /* Mengurangi shadow untuk efek yang lebih halus */
+}
+
+
+.btn-primary {
+    background-color: #feb47b;
+    border-color: #feb47b;
+    padding: 10px 20px;
+    border-radius: 50px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.btn-primary:hover {
+    background-color: #ff7e5f;
+    border-color: #ff7e5f;
+}
+
+
+.pelayanan-section {
+  padding: 80px 0;
+}
+
+.feature-card {
+   border: 1px solid rgba(255, 255, 255, 0.295);
+    border-radius: 10px;
+    padding: 20px;
+    height: 300px;
+    margin: 10px 0;
+    background:none;
+    color: #fff;
+    transition: transform 0.3s ease-in-out;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+}
+
+.icon-box {
+    font-size: 40px;
+    color: #6a5acd;
+}
+
+.gradient-icon {
+    background: linear-gradient(90deg, #1c3cf3 0%, #e009e4 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+.naonnya .content{
+    
+}
+
+.naonnya img {
+    width: 80%;
+}
+.section-heading {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+}
+
+.step-title {
+    font-size: 36 px;
+    font-weight: 900;
+    padding: 10px 0;
+    text-transform: uppercase;
+}
+
+.step-description {
+    font-size: 16px;
+    margin-bottom: 1rem;
+}
+
+.step-image {
+    max-width: 100%;
+    height: auto;
+}
+
+.step-number {
+    color: #a020f0;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.cta-link {
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.cta-link:hover {
+    text-decoration: underline;
+}
+
+
+.subscribe-section {
+    border-radius: 10px;
+    position: relative;
+}
+
+.subscribe-section .bordered {
+    padding: 50px 10px;
+    border: 1px solid rgba(255, 255, 255, 0.301);
+    border-radius: 15px;
+}
+
+.text-gradient {
+    background: linear-gradient(45deg, #6a5acd, #e009e4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.btn-gradient {
+    background: linear-gradient(45deg, #6a5acd, #e009e4);
+    color: #fff;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 30px;
+    transition: background 0.3s ease-in-out;
+}
+
+.btn-gradient:hover {
+    background: linear-gradient(45deg, #e009e4, #6a5acd);
+}
+
+.highlight {
+    color: #e009e4;
+}
+
+.subscribe-section::before,
+.subscribe-section::after {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #6a5acd;
+    animation: move 10s linear infinite;
+}
+
+.subscribe-section::before {
+    top: -30px;
+    left: 10%;
+    
+}
+
+.subscribe-section::after {
+    bottom: -30px;
+    right: 10%;
+    background-color:  #e009e4;
+}
+
+@keyframes move {
+    0% {
+        transform: translateX(0) translateY(0);
+    }
+    50% {
+        transform: translateX(30px) translateY(20px);
+    }
+    100% {
+        transform: translateX(0) translateY(0);
+    }
 }
