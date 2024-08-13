@@ -129,16 +129,6 @@ body {
     transition: all .5s ease-in-out;
 }
 
-.scrolled::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    backdrop-filter: blur(24px);
-    z-index: -1;
-}
 
 .scrolled .navbar a {
     color: black;
