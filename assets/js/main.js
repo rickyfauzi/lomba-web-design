@@ -1,12 +1,16 @@
 document.addEventListener('scroll', () => {
-    var header = document.querySelector('.navbar'); // Mengubah pemilihan elemen menjadi '.navbar'
-
+    var header = document.querySelector('.navbar'); 
+    var brand = document.getElementById('navbar-logo');
+    
     if (window.scrollY > 0) {
         header.classList.add('scrolled');
+        brand.src = "assets/img/png2.png"; // Ganti dengan path ke gambar logo hitam
     } else {
         header.classList.remove('scrolled');
+        brand.src = "assets/img/png 1.png"; // Ganti dengan path ke gambar logo putih
     }
 });
+
 
 
 //  window.addEventListener('scroll', function () {

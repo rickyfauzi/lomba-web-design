@@ -68,6 +68,7 @@ body {
     left: 0;
     width: 100%;
     z-index: 99;
+    background-color:#0F051D;
 }
 
 .navbar .btn-outline-secondary {
@@ -79,16 +80,12 @@ body {
     padding: 10px 16px;
 }
 
-.navbar-brand {
-    color: white;
-    text-transform: uppercase;
-    font-size: 25px;
-    font-weight: 800;
-    z-index: 99;
+.navbar-brand img {
+   width: 170px;
 }
 
 .navbar {
-    padding: 20px 40px;
+
 }
 
 .navbar-nav .nav-link {
@@ -121,6 +118,10 @@ body {
     background-color: white;
 }
 
+.navbar-collapse {
+    background-color: #06042E;
+}
+
 .scrolled {
     position: fixed;
     background-color: white;
@@ -129,16 +130,7 @@ body {
     transition: all .5s ease-in-out;
 }
 
-.scrolled::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    backdrop-filter: blur(24px);
-    z-index: -1;
-}
+
 
 .scrolled .navbar a {
     color: black;
@@ -235,6 +227,7 @@ section {
 }
 
 .hero-section {
+   
     min-height: 100vh;
     display: flex;
     justify-content: center;
@@ -258,6 +251,10 @@ section {
         align-items: center;
         text-align: start;
     }
+
+    .hero-section img {
+        padding: 40px 0;
+    }
 }
 .display-4 span {}
 
@@ -277,9 +274,7 @@ section {
     align-items: center;
 }
 
-.hero img {
-    width: 500px;
-}
+
 
 .buttons {
     padding: 60px 0;
@@ -292,14 +287,13 @@ section {
     padding: 15px 20px;
     border-radius: 50px;
     color: white;
-    box-shadow: 4px 6px black;
-    overflow: hidden;
-    z-index: 1;
+    transition: all .3s ease-in-out;
+    
 }
 
 .btn-main:hover {
-    border: 2px solid black;
-    box-shadow: 4px 6px white;
+    border: 2px solid white;
+    color: var(--white);
     transition: all .3s ease-in-out;
 }
 
@@ -355,9 +349,7 @@ section {
     z-index: 2;
     padding: 20px;
     background: rgba(255, 255, 255, 0.5);
-    /* Tambahkan latar belakang hitam transparan */
     border-radius: 10px;
-    /* Border-radius untuk teks background */
 }
 
 .informasi-text h5 {
@@ -589,8 +581,9 @@ section {
 }
 
 .btn-primary:hover {
-    background-color: #ff7e5f;
-    border-color: #ff7e5f;
+    border: 2px solid white;
+    color: var(--white);
+    transition: all .3s ease-in-out;
 }
 
 
@@ -598,262 +591,12 @@ section {
     .sec-img {
         margin-right: 80px;
     }
-    /* Gaya untuk tablet atau iPad */
+
 }
 
 
-/* CSS untuk section dengan dua kolom */
 
-.two-col-sec {
-    padding: 60px 0;
-}
 
-.two-col-sec .sec-img {
-    text-align: right;
-    /* Agar gambar berada di kanan */
-}
-
-.two-col-sec .sec-img img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-}
-
-.two-col-sec .sec-text {
-    text-align: left;
-    color: black;
-}
-
-.two-col-sec .xxl-title {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-}
-
-.two-col-sec p {
-    margin-bottom: 20px;
-    line-height: 1.6;
-    color: black;
-}
-
-@media (max-width: 767px) {
-    .sec-text .xxl-title {
-        text-align: center;
-    }
-    .sec-text p {
-        text-align: justify;
-    }
-}
-
-.ud-contact {
-    padding: 120px 0px;
-    position: relative;
-    color: black;
-}
-
-@media (max-width: 767px) {
-    .ud-contact {
-        padding: 80px 0;
-    }
-}
-
-.ud-contact::after {
-    content: "";
-    position: absolute;
-    z-index: -1;
-    width: 100%;
-    top: 0;
-    left: 0;
-    height: 50%;
-    background: #f3f4fe;
-}
-
-@media only screen and (min-width: 992px) and (max-width: 1199px) {
-    .ud-contact::after {
-        height: 45%;
-    }
-}
-
-.ud-contact-title {
-    margin-bottom: 150px;
-}
-
-@media only screen and (min-width: 768px) and (max-width: 991px),
-(max-width: 767px) {
-    .ud-contact-title {
-        margin-bottom: 50px;
-    }
-}
-
-.ud-contact-title span {
-    color: #06042E;
-    font-weight: 600;
-    font-size: 15px;
-    margin-bottom: 20px;
-}
-
-.ud-contact-title h2 {
-    font-weight: 600;
-    font-size: 35px;
-    line-height: 41px;
-}
-
-.ud-contact-info-wrapper {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-}
-
-@media only screen and (min-width: 768px) and (max-width: 991px),
-(max-width: 767px) {
-    .ud-contact-info-wrapper {
-        margin-bottom: 50px;
-    }
-}
-
-.ud-contact-info-wrapper {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-.ud-contact-info-wrapper .ud-single-info {
-    flex: 1;
-    max-width: 43.33%;
-}
-
-.ud-contact-info-wrapper .ud-info-icon {
-    font-size: 32px;
-    color: #06042E;
-    margin-right: 24px;
-}
-
-.ud-contact-info-wrapper .ud-info-meta h5 {
-    font-weight: 600;
-    font-size: 18px;
-    margin-bottom: 15px;
-}
-
-.ud-contact-info-wrapper .ud-info-meta p {
-    font-size: 15px;
-    line-height: 24px;
-}
-
-.ud-contact-form-wrapper {
-    -webkit-box-shadow: 0px 4px 28px rgba(0, 0, 0, 0.05);
-    box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.2);
-    border-radius: 8px;
-    background: white;
-    padding: 60px;
-}
-
-@media (max-width: 767px) {
-    .ud-contact-form-wrapper {
-        padding: 40px 30px;
-    }
-    .ud-contact-info-wrapper .ud-single-info {
-        flex: 2;
-        max-width: 80.33%;
-    }
-    .ud-contact-form-wrapper {
-        box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.2);
-    }
-}
-
-@media only screen and (min-width: 1200px) and (max-width: 1399px),
-only screen and (min-width: 992px) and (max-width: 1199px),
-only screen and (min-width: 576px) and (max-width: 767px) {
-    .ud-contact-form-wrapper {
-        padding: 50px 40px;
-    }
-}
-
-.ud-contact-form-wrapper .ud-contact-form-title {
-    font-style: normal;
-    font-weight: 600;
-    font-size: 28px;
-    margin-bottom: 30px;
-}
-
-@media (max-width: 767px) {
-    .ud-contact-form-wrapper .ud-contact-form-title {
-        font-size: 24px;
-    }
-}
-
-.ud-contact-form-wrapper .ud-form-group {
-    margin-bottom: 25px;
-}
-
-.ud-contact-form-wrapper .ud-form-group label {
-    display: block;
-    font-weight: normal;
-    font-size: 12px;
-}
-
-.ud-contact-form-wrapper .ud-form-group input,
-.ud-contact-form-wrapper .ud-form-group textarea {
-    display: block;
-    width: 100%;
-    padding: 15px 0;
-    border: none;
-    outline: none;
-    border-bottom: 1px solid #f1f1f1;
-    resize: none;
-}
-
-.ud-contact-form-wrapper .ud-form-group input:focus,
-.ud-contact-form-wrapper .ud-form-group textarea:focus {
-    border-color: #06042E;
-}
-
-@media (max-width: 767px) {
-    .ud-contact {
-        padding: 80px 0;
-    }
-    .ud-contact-title {
-        margin-bottom: 50px;
-    }
-    .ud-contact-info-wrapper {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-    .ud-contact-info-wrapper .ud-single-info {
-        width: 100%;
-        margin-bottom: 20px;
-    }
-}
-
-@media (min-width: 768px) and (max-width: 991px) {
-    .ud-contact::after {
-        height: 45%;
-    }
-}
-
-.review {
-    box-shadow: 0 12px 12px rgba(0, 0, 0, 0.1);
-}
-
-.review .person {
-    display: flex;
-    align-items: center;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.07);
-    padding-bottom: 18px;
-}
-
-.review .person img {
-    width: 75px;
-    height: 75px;
-    border-radius: 100px;
-}
-
-.review .stars {
-    color: orange;
-}
 
 .top-text {
     color: #6440FB;
@@ -984,12 +727,13 @@ only screen and (min-width: 576px) and (max-width: 767px) {
 
 
 .btn-primary {
-    background-color: #feb47b;
-    border-color: #feb47b;
-    padding: 10px 20px;
+    background: linear-gradient(90deg, #1c3cf3 0%, #e009e4 100%);
+    position: relative;
+    border: 1px solid #000;
+    padding: 15px 20px;
     border-radius: 50px;
-    text-transform: uppercase;
-    font-weight: 600;
+    color: white;
+    transition: all .3s ease-in-out;
 }
 
 .btn-primary:hover {
@@ -1028,6 +772,7 @@ only screen and (min-width: 576px) and (max-width: 767px) {
     -webkit-text-fill-color: transparent;
 }
 
+/* start pelayanan */
 
 .naonnya .content{
     
@@ -1065,10 +810,22 @@ only screen and (min-width: 576px) and (max-width: 767px) {
     font-weight: bold;
 }
 
+@media (min-width: 768px) and (max-width: 1024px) {
+    .step-description {
+        text-align:justify;
+    }
+}
+
+/* end pelayanan */
+
 .cta-link {
     font-size: 1rem;
     font-weight: bold;
-    text-decoration: none;
+    text-decoration: underline;
+    color: white;
+    background: linear-gradient(90deg, #1c3cf3 0%, #e009e4 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .cta-link:hover {
@@ -1114,8 +871,8 @@ only screen and (min-width: 576px) and (max-width: 767px) {
 .subscribe-section::after {
     content: '';
     position: absolute;
-    width: 100px;
-    height: 100px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     background-color: #6a5acd;
     animation: move 10s linear infinite;
@@ -1144,3 +901,80 @@ only screen and (min-width: 576px) and (max-width: 767px) {
         transform: translateX(0) translateY(0);
     }
 }
+
+@media  (max-width: 1024px) {
+    .subscribe-section::before,
+    .subscribe-section::after {
+        content: '';
+        position: absolute;
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        background-color: #6a5acd;
+        animation: move 10s linear infinite;
+    }
+    .subscribe-section::after {
+    
+        bottom: 30px;
+        right: 20%;
+        background-color:  #e009e4;
+    }
+
+    .bordered form { 
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+.team-member {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  .team-member img {
+    border-radius: 15px;
+    border: 5px solid #fff;
+    margin-bottom: 15px;
+    max-width: 100%;
+  }
+  .team-member h4 {
+    color: var(--white);
+    font-weight: 700;
+  }
+  .team-member span {
+    color: #7a738f;
+  }
+  .social-icons {
+    list-style: none;
+    padding: 0;
+    margin-top: 15px;
+
+    text-align: center;
+  }
+  .social-icons li {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  .social-icons i {
+    font-size: 20px;
+    color: white;
+  }
+
+  .social-icons i:hover {
+    background: linear-gradient(90deg, #1c3cf3 0%, #e009e4 100%);
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+
+  img.riki {
+    background-color: #e009e4;
+  }
+  img.dipa {
+    background-color: #38b000;
+  }
+ img.zaki{
+    background-color: #1c3cf3;
+  }
+
