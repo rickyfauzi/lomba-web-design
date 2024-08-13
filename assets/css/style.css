@@ -248,6 +248,8 @@ section {
         align-items: center;
         text-align: start;
     }
+    .hero-section img {
+        padding: 35px;
 }
 .display-4 span {}
 
