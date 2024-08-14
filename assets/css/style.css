@@ -694,12 +694,13 @@ section {
   color: #fff;
   text-align: justify;
   line-height: 1.6; /* Mengurangi jarak antar baris */
-  margin-bottom: 15px; /* Mengurangi margin bawah paragraf */
+  margin-bottom: 20px; /* Mengurangi margin bawah paragraf */
 }
 
 .about-image img {
   border-radius: 8px; /* Sedikit mengurangi border-radius */
   box-shadow: 0 3px 15px rgba(19, 8, 8, 0.6); /* Mengurangi shadow untuk efek yang lebih halus */
+  margin-bottom: 15px;
 }
 
 .btn-primary {
