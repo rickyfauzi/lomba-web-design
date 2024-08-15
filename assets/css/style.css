@@ -179,8 +179,12 @@ body {
 }
 
 @media (max-width: 768px) {
+
+    .navbar {
+        padding:0 15px;
+    }
   .navbar-brand {
-    font-size: 20px;
+    width:30px;
     /* Atur ukuran font */
   }
   .navbar-toggler {
@@ -457,7 +461,6 @@ section {
 
 .footer {
   background: #06042e;
-  padding: 30px 0px;
   color: white;
   text-align: center;
   justify-content: center;
@@ -551,8 +554,9 @@ section {
 }
 
 .btn-main:hover {
-  background-color: #ff7e5f;
-  color: #fff;
+  border: 2px solid white;
+  color: var(--white);
+  transition: all 0.3s ease-in-out;
 }
 
 .btn-primary {
@@ -568,111 +572,7 @@ section {
   transition: all 0.3s ease-in-out;
 }
 
-@media (min-width: 768px) and (max-width: 991px) {
-  .sec-img {
-    margin-right: 80px;
-  }
-}
 
-.top-text {
-  color: #6440fb;
-  font-size: 14px;
-}
-.nav-pills .nav-link {
-  color: #6c6c6c;
-  background-color: transparent;
-  border: none;
-}
-.nav-pills .nav-link.active {
-  color: #6440fb;
-  background-color: transparent;
-  border-bottom: 2px solid #6440fb;
-  border-radius: 0;
-}
-.course-card {
-  border-radius: 10px;
-  margin: 15px;
-  overflow: hidden;
-  border: 1px solid;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
-}
-.course-image {
-  height: 200px;
-  background-size: cover;
-  background-position: center;
-  position: relative;
-}
-.course-tags {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  color: #000000;
-}
-.course-tag {
-  background-color: white;
-  border-radius: 20px;
-  padding: 5px 10px;
-  margin-right: 5px;
-  font-size: 12px;
-}
-.course-info {
-  padding: 20px;
-}
-
-.course-info h5 {
-  color: black;
-}
-.course-rating {
-  color: #ffc107;
-}
-.enroll-btn {
-  background-color: #ffc107;
-  border: none;
-  border-radius: 20px;
-  padding: 5px 15px;
-}
-.course-price {
-  color: #6440fb;
-  font-weight: bold;
-}
-.slick-prev,
-.slick-next {
-  width: 40px;
-  height: 40px;
-  background-color: #6440fb;
-  border-radius: 50%;
-  z-index: 10;
-}
-.slick-prev:before,
-.slick-next:before {
-  font-size: 20px;
-}
-.slick-prev {
-  left: -40px;
-}
-.slick-next {
-  right: -40px;
-}
-
-.course-slider {
-  height: 100%;
-  padding: 40px 0;
-  height: 400px;
-  margin-bottom: 40px;
-}
-
-.slide h1 {
-  color: #161439;
-}
-
-.page-item {
-  margin: 0 5px;
-}
-
-.page-link {
-  color: #007bff;
-  text-decoration: none;
-}
 .about-section {
   padding: 80px 0;
 }
@@ -714,8 +614,9 @@ section {
 }
 
 .btn-primary:hover {
-  background-color: #ff7e5f;
-  border-color: #ff7e5f;
+  border: 2px solid white;
+  color: var(--white);
+  transition: all 0.3s ease-in-out;
 }
 
 .pelayanan-section {
@@ -742,7 +643,7 @@ section {
   color: #6a5acd;
 }
 
-.gradient-icon {
+.icon-box i{
   background: linear-gradient(90deg, #1c3cf3 0%, #e009e4 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -810,6 +711,12 @@ section {
 .subscribe-section {
   border-radius: 10px;
   position: relative;
+  padding: 50px;
+}
+
+.subscribe-section h2 {
+  font-weight: 800;
+  font-size: 40px;
 }
 
 .subscribe-section .bordered {
@@ -858,8 +765,8 @@ section {
 }
 
 .subscribe-section::after {
-  bottom: -30px;
-  right: 10%;
+  bottom: 10px;
+  right: 20%;
   background-color: #e009e4;
 }
 
@@ -948,4 +855,215 @@ img.dipa {
 }
 img.zaki {
   background-color: #1c3cf3;
+}
+
+/* faq */
+
+@media (min-width: 1200px) {
+  .faq .sub-title {
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    font-weight: 900;
+  }
+}
+
+@media (max-width: 1024px) {
+  .faq .sub-title {
+    text-align: center;
+  }
+}
+
+
+.faq span {
+  background: linear-gradient(90deg, #1c3cf3 0%, #e009e4 100%);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.accordion-item {
+  background: none;
+}
+
+.accordion-header {
+  background:none ;
+}
+
+.ajakan {
+  background: url('https://www.britweb.co.uk/wp-content/uploads/2023/05/dev_banner-optimized.webp') no-repeat center center/cover;
+  position: relative;
+  overflow: hidden;
+  height: 70vh;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ajakan .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); /* Darken the image */
+  z-index: 1;
+}
+
+
+
+.ajakan::before,
+.ajakan::after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+ 
+ 
+}
+
+.ajakan::after {
+  top: 0;
+  background: linear-gradient(180deg,rgb(23, 6, 50) 10% , rgba(14, 13, 13, 0.555)30%);
+  
+}
+
+
+.ajakan::before {
+bottom: 0;
+  background: linear-gradient(0deg,rgb(38, 1, 90) 10% , rgba(14, 13, 13, 0.555)30%);
+  
+}
+
+
+
+.ajakan .container {
+  position: relative;
+  z-index: 3;
+}
+
+.ajakan h1 {
+  font-weight: 900;
+}
+
+.ajakan span {
+  background: linear-gradient(90deg, #1c3cf3 0%, #e009e4 100%);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+
+/* tech sec */
+.technologies-section .tech-icon {
+  font-size: 4rem; /* Ukuran ikon */
+  margin-bottom: 1rem;
+  padding-top: 25px;
+}
+
+.technologies-section h5 {
+  color: #ffffff;
+  font-size: 1.25rem;
+  margin-top: 1rem;
+}
+
+/* Specific Icon Colors (if not set inline) */
+.tech-icon .bxl-html5 {
+  color: #E34F26;
+}
+
+.tech-icon .bxl-css3 {
+  color: #1572B6;
+}
+
+.tech-icon .bxl-javascript {
+  color: #F7DF1E;
+}
+
+.tech-icon .bxl-php {
+  color: #777BB4;
+}
+
+.tech-icon .bxl-bootstrap {
+  color: #7952B3;
+}
+
+.bx-code-alt {
+  color: #F74E19;
+}
+
+/* Hover Effects */
+.technologies-section {
+  padding-bottom: 40px 0;
+}
+.technologies-section .tech-icon {
+  font-size: 4rem; /* Ukuran ikon */
+  margin-bottom: 1rem;
+}
+
+.technologies-section h5 {
+  color: #ffffff;
+  font-size: 1.25rem;
+  margin-top: 1rem;
+}
+
+/* Specific Icon Colors (if not set inline) */
+.tech-icon .html {
+  color: #E34F26;
+}
+
+.tech-icon .css {
+  color: #1572B6;
+}
+
+.tech-icon .js {
+  color: #F7DF1E;
+}
+
+.tech-icon .php {
+  color: #777BB4;
+}
+
+.tech-icon .boostraps {
+  color: #7952B3;
+}
+
+.tech-icon .ci {
+  color: #F74E19;
+}
+
+
+.tech-icon .laravel {
+  color: #FF2D20;
+}
+
+.tech-icon .mysql {
+  color: #00758F;
+}
+
+.tech-icon .sql {
+  color: #4479A1;
+}
+
+/* General Styles */
+.tech-icon {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  
+}
+
+.tech-icon img {
+  width: 60px;
+}
+
+/* Hover Effects */
+.tech-icon:hover {
+  transform: scale(1.1); /* Sedikit perbesar ikon saat hover */
+  transition: transform 0.3s ease;
+}
+.tech-icon:hover {
+  transform: scale(1.1); /* Sedikit perbesar ikon saat hover */
+  transition: transform 0.3s ease;
 }
