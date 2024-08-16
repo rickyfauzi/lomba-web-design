@@ -633,8 +633,13 @@ section {
 }
 
 .subscribe-section::after {
+<<<<<<< HEAD
   bottom: 30px;
   right: 10%;
+=======
+  bottom: 10px;
+  right: 20%;
+>>>>>>> 9cce9d5e795eec4e6da534f843ad14cc4fe44486
   background-color: #e009e4;
 }
 
@@ -935,6 +940,7 @@ bottom: 0;
   transform: scale(1.1); /* Sedikit perbesar ikon saat hover */
   transition: transform 0.3s ease;
 }
+<<<<<<< HEAD
 
 .project {
   position: relative;
@@ -998,3 +1004,5 @@ bottom: 0;
 .footer-sec a{
   text-decoration: none;
 }
+=======
+>>>>>>> 9cce9d5e795eec4e6da534f843ad14cc4fe44486
