@@ -417,6 +417,35 @@ section {
   animation: move 10s linear infinite;
 }
 
+@media (max-width: 1024px) {
+  .about-section::before,
+  .about-section::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+  }
+
+  .about-section::before {
+    bottom: 70px;
+    left: 10%;
+    border-left: 12.5px solid transparent; /* 50% dari 25px */
+    border-right: 12.5px solid transparent; /* 50% dari 25px */
+    border-bottom: 25px solid #6a5acd; /* 50% dari 50px */
+    animation: move 10s linear infinite;
+  }
+
+  .about-section::after {
+    top: 120px;
+    right: 20%;
+    background-color: transparent;
+    border: 12.5px solid #e009e4; /* 50% dari 25px */
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    animation: move 10s linear infinite;
+  }
+}
+
+
 
 .about .content {
 }
@@ -488,6 +517,35 @@ section {
   border: 25px solid #e009e4;
   clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
   animation: move 10s linear infinite;
+}
+
+@media (max-width:1024px){
+  .pelayanan-section::before,
+.pelayanan-section::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+}
+
+.pelayanan-section::after {
+  bottom: -20px;
+  left: 10%;
+  border-left: 12.5px solid transparent; /* 50% dari 25px */
+  border-right: 12.5px solid transparent; /* 50% dari 25px */
+  border-bottom: 25px solid #6a5acd; /* 50% dari 50px */
+  animation: move 10s linear infinite;
+}
+
+.pelayanan-section::before {
+  top: 20px;
+  right: 20%; 
+  background-color: transparent;
+  border: 12.5px solid #e009e4; /* 50% dari 25px */
+  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+  animation: move 10s linear infinite;
+}
+
 }
 
 
@@ -969,6 +1027,36 @@ bottom: 0;
   animation: move 10s linear infinite;
 }
 
+@media (max-width:1024px){
+  .project::before,
+.project::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+}
+
+.project::before {
+  bottom: -30px;
+  left: 10%;
+  border-left: 12.5px solid transparent;
+  border-right: 12.5px solid transparent;
+  border-bottom: 12px solid #6a5acd;
+  animation: move 10s linear infinite;
+}
+
+.project::after {
+  top: 20px;
+  right: 20%;
+  background-color: transparent;
+  border: 12.5px solid #e009e4;
+  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+  animation: move 10s linear infinite;
+}
+
+
+}
+
 
 .project-card {
   background: transparent;
@@ -1001,4 +1089,6 @@ bottom: 0;
 .footer-sec a{
   text-decoration: none;
 }
+
+
 
