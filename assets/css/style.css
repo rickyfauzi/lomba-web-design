@@ -467,13 +467,10 @@ section {
 }
 
 
-.about-image {
-  box-shadow: 3px 3px 10px rgb(0, 0, 0,0.5);
-}
 
 .about-image img {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.4);
+  margin-bottom: 15px;
 }
 
 
