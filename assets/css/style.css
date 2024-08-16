@@ -447,8 +447,7 @@ section {
 
 
 
-.about .content {
-}
+
 
 .about-text h2 {
   font-size: 28px;
@@ -467,10 +466,19 @@ section {
   margin-bottom: 20px; 
 }
 
-.about-image img {
-  border-radius: 8px; 
-  margin-bottom: 15px;
+
+.about-image {
+  box-shadow: 3px 3px 10px rgb(0, 0, 0,0.5);
+  padding: 40px 0;
 }
+
+.about-image img {
+  margin-bottom: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+}
+
+
 
 .btn-primary {
   background: linear-gradient(90deg, #1c3cf3 0%, #e009e4 100%);
@@ -1089,6 +1097,4 @@ bottom: 0;
 .footer-sec a{
   text-decoration: none;
 }
-
-
 
